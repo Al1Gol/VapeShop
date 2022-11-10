@@ -1,0 +1,17 @@
+.content {
+    margin: 100px 50px 100px 50px;
+    background-image: url('./img/Logo1.png'); /* выходим из папки css на уровень вверх, и заходим в папку img */
+    background-position: 0 50%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .card{
+    
+ }
+
+
+
