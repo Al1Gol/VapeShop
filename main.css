@@ -1,11 +1,25 @@
+
+
 a {
     text-decoration: none;
     color: black; /* Отменяем подчеркивание у ссылки */
     }
 
+a:hover {
+    color: black; /* Отменяем подчеркивание у ссылки */
+    }
+    
+
+.navbar-brand{
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
 .content {
     margin: 100px 50px 100px 50px;
-    background-image: url('./img/Logo1.png'); /* выходим из папки css на уровень вверх, и заходим в папку img */
+    /*background-image: url('./img/Logo1.png');*/ /* выходим из папки css на уровень вверх, и заходим в папку img */
     background-position: 0 50%;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -13,7 +27,11 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: calc(100vh - 50px);
+    min-height: calc(100vh - 311px);
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
  }
 
  .card {
@@ -48,8 +66,69 @@ a {
 
 .nav-item {
     margin: 5px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    
+}
+
+.content-text{
+    min-width: 100vw;
+    text-align: center;
+    font-size: 28px;
 }
 
 footer{
-    min-height: 50px;
+    height: 50px;
+}
+
+.age-checker{
+    box-shadow: 3px -3px gray;
+    border: 3px solid;
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-popup{
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.content-popup{
+    padding: 20px;
+}
+
+.popup-btn{
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    width: 200px;
+}
+
+.content-popup{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+    
+}
+
+.btn-confirm-age{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.blur{
+    filter: blur(4px);
+}
+
+.not-visible{
+    display: none;
 }
