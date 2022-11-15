@@ -37,6 +37,9 @@ a:hover {
  .card {
     margin: 15px;
     border-color: black;
+ }
+
+ .card:hover {
     box-shadow: 4px -4px gray;
  }
 
@@ -49,7 +52,7 @@ a:hover {
  }
 
 .card-text {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .card-sep {
@@ -119,16 +122,21 @@ footer{
     
 }
 
-.btn-confirm-age{
+.checher-age{
     display: flex;
     flex-wrap: wrap;
     gap: 70px;
 }
 
-.blur{
+.disable{
+    pointer-events: none;
     filter: blur(4px);
 }
 
 .not-visible{
     display: none;
+}
+
+.warning{
+    color: red;
 }

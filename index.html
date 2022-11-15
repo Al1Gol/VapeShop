@@ -9,10 +9,9 @@
 </head>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./main.css'>
-    <script src='./main.js'></script>
 </head>
 <body>
-    <header>
+    <header class="disable">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Vaypos</a>
@@ -20,7 +19,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav" id = "list">
                 <li class="nav-item dropdown">
                   <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Главная страница
@@ -60,13 +59,13 @@
           </div>
       </nav>
     </header>
-    <div class = "content">
+    <div class = "content disable">
       <div class = "group-card">
         <a href="#">
           <div class="card" style="width: 15rem;">
             <img src="./img/products/1.jpg" class="card-img-top card-sep" alt="Жидкости для подов">
             <div class="card-body">
-              <p class="card-text">Жидкости для подов</p>
+              <p class="card-text"><b>Жидкости для подов</b></p>
             </div>     
           </div>
         </a>
@@ -74,7 +73,7 @@
           <div class="card" style="width: 15rem;">
             <img src="./img/products/electro_sig.jpg" class="card-img-top  card-sep" alt="Электронные сигареты">
             <div class="card-body">
-              <p class="card-text">Электронные сигареты</p>
+              <p class="card-text"><b>Электронные сигареты</b></p>
             </div>     
           </div>
         </a>
@@ -84,7 +83,7 @@
           <div class="card" style="width: 15rem;">
             <img src="./img/products/pods.png" class="card-img-top card-sep" alt="Pod системы">
             <div class="card-body">
-              <p class="card-text">Pod системы</p>
+              <p class="card-text"><b>Pod системы</b></p>
             </div>     
           </div>
         </a>
@@ -92,7 +91,7 @@
           <div class="card" style="width: 15rem;">
             <img src="./img/products/aikos.jpg" class="card-img-top  card-sep" alt="Айкос">
             <div class="card-body">
-              <p class="card-text">Айкос</p>
+              <p class="card-text"><b>Айкос</b></p>
             </div>     
           </div>
         </a>
@@ -102,7 +101,7 @@
         <p><i><b>Скидка 5% каждому покупателю.</b></i></p>
       </div>
     </div>
-    <footer class = "bg-dark">
+    <footer class = "bg-dark disable">
 
     </footer>
     <div class="age-checker">
@@ -111,11 +110,12 @@
       </div>
       <div class="content-popup">
         <h3>Данный сайт предназначен для лиц старше 18 лет</h3>
-        <div class="btn-confirm-age">
-          <button class="popup-btn text-white-50 bg-dark">Мне есть 18 лет</button>
-          <button class="popup-btn text-white-50 bg-dark">Мне нет 18 лет</button>
+        <div class="checher-age">
+          <button class="popup-btn text-white-50 bg-dark" id="confirm-age">Мне есть 18 лет</button>
+          <button class="popup-btn text-white-50 bg-dark" id="not-confirm-age">Мне нет 18 лет</button>
         </div>
       </div>
     </div>
 </body>
+<script src='./script.js' defer></script>
 </html>
