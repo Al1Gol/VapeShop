@@ -87,11 +87,9 @@ footer{
 }
 
 .age-checker{
-    box-shadow: 3px -3px gray;
     border: 3px solid;
     background-color: white;
     width: 700px;
-    height: 400px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -114,12 +112,17 @@ footer{
     width: 200px;
 }
 
+.popup-btn:hover{
+    box-shadow: 4px -4px gray;
+}
+
 .content-popup{
     display: flex;
     flex-direction: column;
     gap: 70px;
     align-items: center;
-    
+    padding-bottom: 50px;
+
 }
 
 .checher-age{
@@ -139,4 +142,16 @@ footer{
 
 .warning{
     color: red;
+}
+
+@media (max-width: 800px) {
+    .age-checker{
+        width: 450px;
+    }
+
+    .popup-btn{
+        font-size: 20px;
+        padding: 5px 10px 5px 10px;
+        width: 120px;
+    }
 }
