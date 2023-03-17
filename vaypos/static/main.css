@@ -144,6 +144,15 @@ footer{
     color: red;
 }
 
+.info-block{
+    display: flex;
+    flex-direction: column;
+}
+
+#adress-text{
+    
+}
+
 @media (max-width: 800px) {
     .age-checker{
         width: 450px;
@@ -153,5 +162,29 @@ footer{
         font-size: 20px;
         padding: 5px 10px 5px 10px;
         width: 120px;
+    }
+}
+
+@media (max-width: 500px) {
+    .age-checker{
+        width: 80%;
+    }
+
+    .content-popup>h3 {
+        font-size: 16px;
+    }
+
+    .header-popup>h4{
+        font-size: 18px;
+    }
+
+    .popup-btn{
+        font-size: 12px;
+        width: 70px;
+        padding: 5px;
+    }
+
+    .warning>b{
+        font-size: 12px;
     }
 }
