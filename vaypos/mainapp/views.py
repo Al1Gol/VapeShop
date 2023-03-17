@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.shortcuts import render
+from mainapp.models import Menu
 
 
 # Create your views here.
@@ -9,9 +10,11 @@ images = ''
 
 def main(request):
     title = 'Главная'
+    el = Menu.objects.all().order_by('priority')
     content = {
         'title': title,
-        'media': media_url
+        'media': media_url,
+        'elements': el
     }
     print(type(settings.MEDIA_URL), settings.MEDIA_URL)
     return render(request, "mainapp/index.html", content)

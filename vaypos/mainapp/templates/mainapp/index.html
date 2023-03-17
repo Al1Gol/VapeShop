@@ -3,40 +3,16 @@
 
 {% block content %}
   <div class = "group-card">
-    <a href="./liquid.html">
-      <div class="card" style="width: 15rem;">
-        <img src="{{media}}products/1.jpg" class="card-img-top card-sep" alt="Жидкости для подов">
-        <div class="card-body">
-          <p class="card-text"><b>Жидкости для подов</b></p>
+    {% for el in elements %}
+      <a href="./liquid.html">
+        <div class="card" style="width: 15rem;">
+          <img src="{{media}}{{el.img}}" class="card-img-top card-sep" alt="{{name}}">
+          <div class="card-body">
+            <p class="card-text"><b>Жидкости для подов</b></p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="#">
-      <div class="card" style="width: 15rem;">
-        <img src="{{media}}products/electro_sig.jpg" class="card-img-top  card-sep" alt="Электронные сигареты">
-        <div class="card-body">
-          <p class="card-text"><b>Электронные сигареты</b></p>
-        </div>     
-      </div>
-    </a>
-  </div>
-  <div class = "group-card">
-    <a href="#">
-      <div class="card" style="width: 15rem;">
-        <img src="{{media}}products/pods.png" class="card-img-top card-sep" alt="Pod системы">
-        <div class="card-body">
-          <p class="card-text"><b>Pod системы</b></p>
-        </div>     
-      </div>
-    </a>
-    <a href="#">
-      <div class="card" style="width: 15rem;">
-        <img src="{{media}}products/aikos.jpg" class="card-img-top  card-sep" alt="Айкос">
-        <div class="card-body">
-          <p class="card-text"><b>Айкос</b></p>
-        </div>     
-      </div>
-    </a>
+      </a>
+    {% endfor %}
   </div>
   <div class="content-text">
     <p><i><b>Большой выбор, доступные цены, сертифицированный товар.</b></i></p>
