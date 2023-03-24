@@ -1,14 +1,14 @@
 from django.contrib import admin
-from mainapp.models import ProductItem, Menu
+from mainapp.models import Products, Category
 
 # Register your models here.
-admin.site.register(ProductItem)
-admin.site.register(Menu)
+admin.site.register(Products)
+admin.site.register(Category)
 
 def str(self):
     return '%s' % (self.name)
 
-Menu.__str__ = str
+Category.__str__ = str
 
-ProductItem.__str__ = str
+Products.__str__ = str
 

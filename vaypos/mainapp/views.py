@@ -1,13 +1,13 @@
 from django.conf import settings
 from django.shortcuts import render
-from mainapp.models import Menu
+from mainapp.models import Category, Products
 
 
 # Create your views here.
 title = 'Vaypos'
 media_url = settings.MEDIA_URL
 images = ''
-el = Menu.objects.all().order_by('priority')
+el = Category.objects.all().order_by('priority')
 
 def main(request):
     title = 'Главная'
@@ -38,9 +38,12 @@ def contacts(request):
     return render(request, "mainapp/contacts.html", content)
 
 def menu(request, url):
+    products = Products.objects.all().filter(category__url_name = url).order_by('count')
     content = {
         'title': title,
         'media': media_url + images,
-        'elements': el
+        'elements': el,
+        'products': products
+
     }
     return render(request, "mainapp/products.html", content)

@@ -2,4 +2,16 @@
 {% load static %}
 
 {% block content %}
+    {% for product in products %}
+        {% cycle '<div class = "group-card">' '' %}
+        <a href="./liquid.html">
+        <div class="card" style="width: 15rem;">
+            <img src="{{media}}{{product.img}}" class="card-img-top card-sep" alt="{{product.name}}">
+            <div class="card-body">
+            <p class="card-text"><b>{{product.name}}</b></p>
+            </div>
+        </div>
+        </a>
+        {% cycle '' '</div>' %}
+    {% endfor %}
 {% endblock content %}
