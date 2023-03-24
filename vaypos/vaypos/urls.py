@@ -24,13 +24,9 @@ import mainapp.views as mainapp
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainapp.main, name = 'main' ),
-    path('esigs/', mainapp.esigs, name = 'esigs' ),
-    path('address/', mainapp.address, name = 'address' ),
-    path('aikos/', mainapp.aikos, name = 'aikos' ),
-    path('liquid/', mainapp.liquid, name = 'liquid' ),
-    path('pods/', mainapp.pods, name = 'pods' ),
     path('address/', mainapp.address, name = 'address' ),
     path('contacts/', mainapp.contacts, name = 'contacts' ),
+    path('products/<url>/', mainapp.menu, name = 'menu' ),
 ]
 
 if settings.DEBUG:

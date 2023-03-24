@@ -2,18 +2,18 @@
 {% load static %}
 
 {% block content %}
-  <div class = "group-card">
     {% for el in elements %}
+      {% cycle '<div class = "group-card">' '' %}
       <a href="./liquid.html">
         <div class="card" style="width: 15rem;">
-          <img src="{{media}}{{el.img}}" class="card-img-top card-sep" alt="{{name}}">
+          <img src="{{media}}{{el.img}}" class="card-img-top card-sep" alt="{{el.name}}">
           <div class="card-body">
-            <p class="card-text"><b>Жидкости для подов</b></p>
+            <p class="card-text"><b>{{el.name}}</b></p>
           </div>
         </div>
       </a>
+      {% cycle '' '</div>' %}
     {% endfor %}
-  </div>
   <div class="content-text">
     <p><i><b>Большой выбор, доступные цены, сертифицированный товар.</b></i></p>
     <p><i><b>Скидка 5% каждому покупателю.</b></i></p>

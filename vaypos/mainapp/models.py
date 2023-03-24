@@ -5,7 +5,7 @@ class Menu(models.Model):
     name = models.CharField(verbose_name='Наименование', max_length=20)
     img = models.ImageField(verbose_name="Изображение", upload_to="products", blank=True) 
     priority = models.PositiveSmallIntegerField(verbose_name='Приоритет')
-
+    url_name = models.CharField(verbose_name='Ссылка', max_length=50, unique=True)
 
 class ProductItem(models.Model):
     name = models.CharField(verbose_name='Наименование', max_length=100)

@@ -11,26 +11,13 @@
               Главная страница
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="{% url 'liquid' %}">
-              Жидкость для подов
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="{% url 'esigs' %}" role="button">
-              Электронные сигареты
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="{% url 'aikos' %}" role="button">
-              Айкос
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="{% url 'pods' %}" role="button">
-              Pod системы
-            </a>
-          </li>
+          {% for el in elements %}
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{% url 'menu' el.url_name %}">
+                {{ el.name }}
+              </a>
+            </li>
+          {% endfor %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               О нас
